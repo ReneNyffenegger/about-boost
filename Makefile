@@ -7,5 +7,10 @@ INC=/usr/include/boost
 LIB=/usr/lib/x86_64-linux-gnu
 CC=g++
 
-asio/deadline_timer: asio/deadline_timer.cpp
+all: asio/deadline_timer/wait asio/deadline_timer/async_wait
+
+asio/deadline_timer/wait: asio/deadline_timer/wait.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
+
+asio/deadline_timer/async_wait: asio/deadline_timer/async_wait.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system

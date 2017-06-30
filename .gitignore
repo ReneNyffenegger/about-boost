@@ -1,2 +1,3 @@
 *.swp
-asio/deadline_timer
+asio/deadline_timer/wait
+asio/deadline_timer/async_wait

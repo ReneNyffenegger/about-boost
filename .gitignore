@@ -5,3 +5,4 @@ conversion/lexical_cast
 filesystem/file_size
 filesystem/tests
 function/function
+function/member_function

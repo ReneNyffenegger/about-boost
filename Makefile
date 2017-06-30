@@ -24,3 +24,6 @@ filesystem/tests: filesystem/tests.cpp
 
 function/function: function/function.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
+function/member_function: function/member_function.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@

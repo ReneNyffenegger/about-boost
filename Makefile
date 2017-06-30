@@ -21,3 +21,6 @@ filesystem/file_size: filesystem/file_size.cpp
 
 filesystem/tests: filesystem/tests.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_filesystem
+
+function/function: function/function.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@

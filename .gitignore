@@ -4,3 +4,4 @@ asio/deadline_timer/async_wait
 conversion/lexical_cast
 filesystem/file_size
 filesystem/tests
+function/function

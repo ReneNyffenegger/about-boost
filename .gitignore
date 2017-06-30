@@ -2,3 +2,4 @@
 asio/deadline_timer/wait
 asio/deadline_timer/async_wait
 conversion/lexical_cast
+filesystem/tests

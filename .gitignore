@@ -6,3 +6,4 @@ filesystem/file_size
 filesystem/tests
 function/function
 function/member_function
+thread/call_once

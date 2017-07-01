@@ -27,3 +27,6 @@ function/function: function/function.cpp
 
 function/member_function: function/member_function.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
+thread/call_once: thread/call_once.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_thread

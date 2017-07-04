@@ -29,6 +29,9 @@ filesystem/tests: filesystem/tests.cpp
 function/bad_function_call: function/bad_function_call.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
+function/clear: function/clear.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 function/empty: function/empty.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 

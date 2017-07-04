@@ -1,6 +1,7 @@
 INC=/usr/include/boost
 LIB=/usr/lib/x86_64-linux-gnu
-CC=g++
+CC=g++ -Wall -Werror
+
 
 SOURCES=$(shell find -type f -iname '*.cpp')
 all: $(SOURCES:.cpp=)
@@ -11,6 +12,9 @@ asio/deadline_timer/wait: asio/deadline_timer/wait.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
 
 asio/deadline_timer/async_wait: asio/deadline_timer/async_wait.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
+
+bind/simple: bind/simple.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
 
 conversion/lexical_cast: conversion/lexical_cast.cpp

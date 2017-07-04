@@ -5,6 +5,7 @@ conversion/lexical_cast
 filesystem/file_size
 filesystem/tests
 function/bad_function_call
+function/empty
 function/function
 function/member_function
 thread/call_once

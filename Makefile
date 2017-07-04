@@ -1,6 +1,6 @@
 INC=/usr/include/boost
 LIB=/usr/lib/x86_64-linux-gnu
-CC=g++ -Wall -Werror
+CC=g++ -std=c++11 -Wall -Werror
 
 
 SOURCES=$(shell find -type f -iname '*.cpp')
@@ -25,6 +25,9 @@ filesystem/file_size: filesystem/file_size.cpp
 
 filesystem/tests: filesystem/tests.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_filesystem
+
+function/bad_function_call: function/bad_function_call.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
 function/function: function/function.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@

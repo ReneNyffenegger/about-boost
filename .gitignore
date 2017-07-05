@@ -1,7 +1,6 @@
 *.swp
 asio/deadline_timer/wait
 asio/deadline_timer/async_wait
-conversion/lexical_cast
 filesystem/file_size
 filesystem/tests
 function/bad_function_call
@@ -9,5 +8,6 @@ function/clear
 function/empty
 function/function
 function/member_function
+lexical_cast
 thread/call_once
 variant/simple

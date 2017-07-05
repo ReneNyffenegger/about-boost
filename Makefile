@@ -18,8 +18,8 @@ $(shell for DIR in $(EXE_DIRS_UNIQUE); do if [ ! -d $$DIR ]; then mkdir -p $$DIR
 
 all: $(EXES)
 
-$(EXE_DIRS_UNIQUE):
-	@mkdir -p $?
+# $(EXE_DIRS_UNIQUE):
+# 	@mkdir -p $?
 
 # all: asio/deadline_timer/wait asio/deadline_timer/async_wait
 
@@ -58,6 +58,9 @@ bin/lexical_cast: lexical_cast.cpp
 
 bin/noncopyable: noncopyable.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
+bin/regex: regex.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@  -lboost_regex
 
 bin/thread/call_once: thread/call_once.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_thread

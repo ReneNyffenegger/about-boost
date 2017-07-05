@@ -1,9 +1,9 @@
 *.swp
 asio/deadline_timer/wait
 asio/deadline_timer/async_wait
+bad_function_call
 filesystem/file_size
 filesystem/tests
-function/bad_function_call
 function/clear
 function/empty
 function/function

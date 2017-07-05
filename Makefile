@@ -14,18 +14,17 @@ asio/deadline_timer/wait: asio/deadline_timer/wait.cpp
 asio/deadline_timer/async_wait: asio/deadline_timer/async_wait.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
 
+bad_function_call: bad_function_call.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 bind/simple: bind/simple.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system
-
 
 filesystem/file_size: filesystem/file_size.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_filesystem
 
 filesystem/tests: filesystem/tests.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_filesystem
-
-function/bad_function_call: function/bad_function_call.cpp
-	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
 function/clear: function/clear.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@

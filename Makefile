@@ -62,6 +62,9 @@ bin/noncopyable: noncopyable.cpp
 bin/regex: regex.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@  -lboost_regex
 
+bin/shared_ptr: shared_ptr.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 bin/thread/call_once: thread/call_once.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_thread
 

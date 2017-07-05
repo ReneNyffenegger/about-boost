@@ -56,6 +56,9 @@ bin/function/member_function: function/member_function.cpp
 bin/lexical_cast: lexical_cast.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
+bin/noncopyable: noncopyable.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 bin/thread/call_once: thread/call_once.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_thread
 

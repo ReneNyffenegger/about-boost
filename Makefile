@@ -4,16 +4,19 @@ CC=g++ -std=c++11 -Wall -Werror
 
 
 SOURCES=$(shell find -type f -iname '*.cpp')
+
 EXES=$(SOURCES:./%.cpp=bin/%)
+#$(info $$EXE_DIRS_UNIQUE is $(EXE_DIRS_UNIQUE))
+
 EXE_DIRS=$(dir $(EXES))
 # $(info $$EXE_DIRS is $(EXE_DIRS))
+#
 EXE_DIRS_UNIQUE=$(shell for DIR in $(EXE_DIRS); do echo $$DIR; done | sort | uniq)
 # $(info $$EXES is $(EXES))
-$(info $$EXE_DIRS_UNIQUE is $(EXE_DIRS_UNIQUE))
 
 $(shell for DIR in $(EXE_DIRS_UNIQUE); do if [ ! -d $$DIR ]; then mkdir -p $$DIR; fi; done)
 
-all: $(EXES) | $(EXE_DIRS_UNIQUE)
+all: $(EXES)
 
 $(EXE_DIRS_UNIQUE):
 	@mkdir -p $?

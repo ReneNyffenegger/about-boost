@@ -53,6 +53,9 @@ bin/function/function: function/function.cpp
 bin/function/member_function: function/member_function.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
+bin/lambda/_1: lambda/_1.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 bin/lexical_cast: lexical_cast.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 

@@ -80,5 +80,8 @@ bin/variant/simple: variant/simple.cpp
 bin/Boost.test/01-minimal: Boost.test/01-minimal.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_unit_test_framework
 
+bin/Boost.test/fixture_test_suite: Boost.test/fixture_test_suite.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_unit_test_framework
+
 clean:
 	@rm -rf bin

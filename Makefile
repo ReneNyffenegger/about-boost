@@ -71,6 +71,9 @@ bin/shared_ptr: shared_ptr.cpp
 bin/thread/call_once: thread/call_once.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@ -lboost_system -lboost_thread
 
+bin/to_string: to_string.cpp
+	$(CC) -I$(INC) -L$(LIB)  $< -o $@
+
 bin/variant/simple: variant/simple.cpp
 	$(CC) -I$(INC) -L$(LIB)  $< -o $@
 
